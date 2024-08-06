@@ -1,0 +1,25 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: engine
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none  # You can use "update" or "create" or "none" as needed
+    show-sql: true  # Set to true to show SQL queries in logs
+  h2:
+    console:
+      enabled: true
+  liquibase:
+    enabled: true
+    contexts: test

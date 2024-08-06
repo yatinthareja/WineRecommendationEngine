@@ -1,6 +1,29 @@
 spring:
-  application:
-    name: engine
+  profiles:
+    active: default,local
     
+---
+
 server:
   port: 8081
+  
+spring:
+  application:
+    name: engine
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/aaa-mvp
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none  # You can use "update" or "create" or "none" as needed
+    show-sql: true  # Set to true to show SQL queries in logs
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 25MB

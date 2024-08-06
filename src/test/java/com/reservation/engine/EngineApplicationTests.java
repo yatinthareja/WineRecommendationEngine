@@ -1,4 +1,4 @@
-package com.winerecommender.engine;
+package com.reservation.engine;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

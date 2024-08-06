@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  
+POSTGRES_HOST: localhost
+POSTGRES_PORT: 5432
+POSTGRES_USERNAME: postgres
+POSTGRES_PASSWORD: sptelconnections
